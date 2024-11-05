@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SubActivity"
+    android:background="@color/black_spotify">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/baseline_arrow_back_ios_24"
+            android:text=""
+            app:backgroundTint="@color/white_spotify" />
+        <View
+            android:layout_width="280dp"
+            android:layout_height="10dp"/>
+        <ToggleButton
+            android:id="@+id/btnAdd"
+            android:layout_marginTop="10dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/baseline_add_24"
+            />
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        app:cardCornerRadius="60dp"
+        app:cardElevation="100dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@+id/ivSongSub"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        app:srcCompat="@drawable/baseline_music_note_24"
+        app:backgroundTint = "@null"/>
+    </androidx.cardview.widget.CardView>
+    <TextView
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:id="@+id/lbSongNameSub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Song Name"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        />
+
+    <TextView
+        android:layout_margin="10dp"
+        android:layout_gravity="center"
+        android:id="@+id/lbSingerNameSub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Singer Name"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        android:textColor="@color/white"/>
+
+    <SeekBar
+        android:progressTint="@color/white"
+        android:thumbTint="@color/white"
+        android:id="@+id/sbTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:progress="30" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/lbStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:text="00:00" />
+
+        <TextView
+            android:id="@+id/lbEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:text="00:00"
+            android:textColor="@color/white"
+            android:textAlignment="viewEnd" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btnPreSong"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:text=""
+            android:background="@drawable/baseline_skip_previous_24"
+            app:backgroundTint = "@null" />
+
+        <Button
+            android:id="@+id/btnSkipPre"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:background="@drawable/baseline_fast_rewind_24"
+            app:backgroundTint = "@null"
+            android:text="" />
+
+        <Button
+            android:id="@+id/btnMusic"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:background="@drawable/baseline_pause_circle_24"
+            android:text=""
+            app:backgroundTint="@color/green_spotify" />
+
+        <Button
+            android:id="@+id/btnSkipNext"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            app:backgroundTint = "@null"
+            android:background="@drawable/baseline_fast_forward_24"
+            android:text="" />
+
+        <Button
+            android:id="@+id/btnNextSong"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:backgroundTint = "@null"
+            android:background="@drawable/baseline_skip_next_24"
+            android:layout_weight="1"
+            android:text="" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:padding="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <Button
+
+            android:id="@+id/btnVolume"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            app:backgroundTint = "@color/white_spotify"
+            android:background="@drawable/baseline_volume_up_24"
+            android:layout_weight="1"
+            android:text="" />
+
+        <SeekBar
+            android:id="@+id/sbVolume"
+            android:layout_width="300dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:progressTint="@color/white_spotify"
+            android:thumbTint="@color/white_spotify" />
+    </LinearLayout>
+
+</LinearLayout>

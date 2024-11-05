@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_spotify"
+    android:orientation="vertical"
+    tools:context=".fragment.SearchFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tìm Kiếm"
+        android:textColor="@color/green_spotify"
+        android:textSize="30sp"
+        />
+
+    <EditText
+        android:id="@+id/edtSearch"
+        android:drawablePadding="5dp"
+        android:hint="Bạn cần tìm gì?"
+        android:padding="3dp"
+        android:drawableLeft="@drawable/baseline_search_24"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white_spotify"
+        />
+    <View
+        android:layout_width="300dp"
+        android:layout_height="3dp"
+        android:layout_gravity="center"
+        android:background="@color/green_spotify"/>
+    <ListView
+        android:layout_marginTop="20dp"
+        android:id="@+id/lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
